@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--main);
+    color: rgba(255, 255, 255, 0.762);
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --intro: hsl(217, 28%, 15%);
+    --main: hsl(218, 28%, 13%);
+    --footer: hsl(216, 53%, 9%);
+    --testimonials: hsl(219, 30%, 18%);
+    --inside-call-to-action: hsl(176, 68%, 64%);
+    --Blue-call-to-action: hsl(198, 60%, 50%);
+    --Light-error: hsl(0, 100%, 63%);
+}
+
+header,
+section,
+footer {
+    padding: 4rem 2rem;
+    font-size: 14px;
+}
+
+header {
+    background-color: var(--intro);
+    text-align: center;
+
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 1rem;
+    font-size: 10px;
+
+}
+
+li {
+    list-style: none;
+}
+
+li a,
+footer a {
+    color: rgba(255, 255, 255, 0.852);
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+
+    color: rgba(255, 255, 255, 0.79);
+}
+
+nav img {
+    translate: -20% 0;
+    scale: 0.5;
+    max-width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.all {
+    background-color: var(--intro);
+    background-image: url(./images/bg-curvy-mobile.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.all button {
+    background-color: var(--inside-call-to-action);
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 5rem;
+    border-radius: 2rem;
+    border: 0;
+    margin-block: 1rem;
+}
+
+button:hover {
+    background-color: hsl(176, 100%, 68%) !important;
+}
+
+.four-container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-row: 1fr 1fr; */
+}
+
+.four-container>* {
+    text-align: center;
+}
+
+.stay {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+.stay a {
+    text-underline-offset: 0.5rem;
+    color: var(--Blue-call-to-action);
+}
+
+.comment {
+    padding-inline: 3rem;
+}
+
+.comment-cntr {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.comment-cntr>div {
+    background-color: var(--testimonials);
+    padding: 2rem;
+    box-shadow: 2px 2px 5px var(--inside-call-to-action);
+}
+
+.comment-cntr .avatar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar>* {
+    margin: 0;
+    padding: 0;
+}
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h4,
+h3 {
+    color: white !important;
+}
+
+.avatar img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.get {
+    background-color: var(--testimonials);
+    text-align: center;
+
+    translate: 0 10rem;
+
+}
+.get form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-block: 2rem;
+}
+.get form div{
+    text-align: left;
+}
+
+.get form input,
+.get form button {
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 100%;
+}
+
+.get form> ::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.482);
+    font-size: 0.8rem !important;
+}
+
+.get form button {
+    background-color: var(--inside-call-to-action);
+    border: 0;
+}
+
+.get input:focus {
+    box-shadow: 2px 2px 10px white;
+    border: 0;
+    outline: 0;
+}
+
+footer {
+    padding-top: 20rem;
+    background-color: var(--footer);
+}
+
+footer section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+footer section>div:first-child,
+footer section>div:nth-child(2)>p {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+footer section>div:nth-child(2)>p,
+footer ul li {
+    margin-block: 1.4rem;
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+.social {
+    text-align: center;
+}
+
+.social>* {
+    margin-inline: 1rem;
+}
+.error{
+    color: var(--Light-error);
+}
+@media (min-width:800px) {
+
+    header,
+    section,
+    footer {
+        padding: 4rem 8rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    nav img {
+        translate: 0;
+        scale: 1;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    header {
+        background-color: var(--intro);
+        background-image: url(./images/bg-curvy-desktop.svg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .all {
+        background-color: inherit;
+        background-image: none;
+    }
+
+    .all button {
+        font-size: 1rem;
+    }
+
+    .four-container {
+        grid-template-columns: repeat(2, 0.5fr);
+        place-items: center;
+        gap: 2rem;
+    }
+
+    .four-container>div {
+        width: 50%
+    }
+
+    .stay {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .comment {
+        padding-inline: 9rem;
+    }
+
+    .get {
+        max-width: 40rem;
+        margin: auto;
+        padding: 2rem;
+    }
+
+    .get>p,
+    .get>h1 {
+        padding-inline: 5rem;
+    }
+
+    .get form {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-width: 100%;
+        margin-inline: auto;
+    }
+
+    .get form input,
+    form button {
+        padding: 0.5rem 1rem!important;
+    }
+    form>* {
+        flex: 1;
+    }
+    .get form div {
+        flex: 3;
+    }
+
+    footer {
+        padding: 8rem;
+        padding-top: 20rem;
+
+    }
+
+    footer section {
+        padding: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer section>* {
+        flex: 1;
+    }
+
+    footer section>div:nth-child(2)>p,
+    footer ul li {
+        margin-block: 0.4rem;
+    }
+
+    footer section>div:nth-child(1) {
+        flex: 2;
+
+    }
+
+    @media (min-width:1000px) {
+        .all {
+            padding-inline: 30rem;
+        }
+
+        .comment-cntr {
+            flex-direction: row;
+        }
+    }
+}
